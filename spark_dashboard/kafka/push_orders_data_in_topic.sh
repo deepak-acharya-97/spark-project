@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH=$PATH:/home/ec2-user/kafka/bin
+export PATH=$PATH:/home/hadoop/kafka/bin
 FILES=$1/*.csv
 for f in $FILES
 do

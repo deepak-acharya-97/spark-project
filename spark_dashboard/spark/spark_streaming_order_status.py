@@ -1,13 +1,13 @@
 from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
-from pyspark.streaming.kafka import KafkaUtils
+from pyspark_kafka_util import KafkaUtils
 from pykafka import KafkaClient
 import json
 import sys
 import pprint
 
 def pushOrderStatusInKafka(status_counts):
-    client = KafkaClient(hosts="ip-172-31-25-99:9092")
+    client = KafkaClient(hosts="localhost:9092")
     topic = client.topics['orders_ten_sec_data']
     for status_count in status_counts:
             with topic.get_producer() as producer:
