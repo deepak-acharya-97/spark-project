@@ -1,6 +1,6 @@
 from pyspark import SparkContext
 from pyspark.streaming import StreamingContext
-from pyspark.streaming.kafka import KafkaUtils
+from pyspark_kafka_util import KafkaUtils
 from pykafka import KafkaClient
 import json
 import sys
